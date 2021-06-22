@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web Application for Docker</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Docker<span>.</span></a></h1>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome</h1>
+      <h2>Web application for Docker</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Hero Section ======= -->
+  <footer id="footer">
+  
+  <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <p class="description">Enter your command:</p>
+           <!--- <form action="" method="post">  --->
+           <!---   <input id="in1"><input type="submit" value="Submit" onclick="lw()"> --->
+                <input id="in1" />
+                <button onclick='lw()'> Submit </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+           <br/>
+                <pre>
+                        <div id ="d1"><p><h3>command output</h3></p></div>
+</pre>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+               <div class="icon"><i class="bx bxl-dribbble"></i>
+               </div>
+               <a href="#" class="btn-buy" onclick="dimages()">docker images</a>
+             </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+                <a href="#" class="btn-buy" onclick="ps()">docker ps</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <a href="#" class="btn-buy" onclick="drun()">docker run</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <a href="#" class="btn-buy" onclick="rm()">docker rm-f</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+                 <a href="#" class="btn-buy" onclick="exec()" >docker exec</a>
+                            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+
+
+  </main><!-- End #main -->
+
+
+
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+
+function drun(){
+var i="docker run --name d1 centos"
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+<!--- var output=xhr.responseText; --->
+var output="Container named d1 is created."
+document.getElementByID("d1").innerHTML=output;
+}
+}
+
+
+function dimages(){
+var i="docker images"
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+var output=xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+function ps(){
+var i="docker ps"
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+var output=xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+function rm(){
+var i="docker rm -f d1"
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+var output=xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+function exec(){
+var i="docker exec d1 ls -l /var/log"
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+var output=xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+
+
+
+function lw(){
+var i=document.getElementById("in1").value
+var xhr=new XMLHttpRequest();
+xhr.open("GET","http://13.233.236.212/cgi-bin/lw.py?x="+i,true)
+xhr.send()
+xhr.onload=function()
+{
+var output=xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+</script>
+
+</body>
+
+</html>
